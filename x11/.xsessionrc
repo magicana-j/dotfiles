@@ -1,0 +1,3 @@
+xinput --set-prop 11 'Synaptics Finger' 4 55 0
+xinput --set-prop 11 'Synaptics Tap Time' 180
+
