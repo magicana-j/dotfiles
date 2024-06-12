@@ -1,0 +1,14 @@
+public class Main{
+    public int solve(){
+        
+        return 0;
+    }
+    
+    public static void main(String args[]){
+        Scanner stdIn = new Scanner(system.in);
+        int n = stdIn.nextInt();
+        
+        System.out.println("hello");
+    }
+}
+

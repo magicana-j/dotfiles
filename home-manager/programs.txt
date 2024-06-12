@@ -1,0 +1,3 @@
+shotwell
+easyeffects
+git
