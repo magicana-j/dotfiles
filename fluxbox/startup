@@ -16,7 +16,7 @@ xmodmap "/home/amuharai/.Xmodmap"
 # idesk &
 nm-applet &
 fcitx5 &
-feh --bg-scale ${XDG_PICTURES_DIR}/wallpaper.jpg
+feh --bg-scale "~/wallpaper.jpg" &
 
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
