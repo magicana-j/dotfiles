@@ -1,4 +1,19 @@
 #!/bin/sh
 
 sudo xbps-install -Syu
-sudo xbps-install -y sway swaybg swayidle swaylock wofi foot alacritty mako grim slurp light dmidecode imv mpv zathura zathura-pdf-data pulseaudio pulseaudio-utils pavucontrol pipewire pipewire-pulse wireplumber bluez bluez-libs blueman font-fira-code font-hack-nerd font-noto-cjk font-noto-emoji firefox google-chrome fcitx5 fcitx5-anthy fcitx5-gtk fcitx5-qt xdg-utils mesa-dri dbus elogind polkit-elogind seatd openssh xclip grim slurp light dunst lxappearance file-roller unrar unzip p7zip tar xz gzip bzip2 git htop neofetch neovim nano bash-completion curl wget rsync networkmanager NetworkManager-applet usbutils pciutils lshw mesa-dri vulkan-loader intel-media-driver # 必要に応じてnvidia-driversなども
+
+sudo xbps-install -S xf86-video-intel mesa-dri
+sudo xbps-install -S NetworkManager
+sudo ln -sfv /etc/sv/NetworkManager /var/service
+sudo xbps-install -S pipewire wireplumber pipewire-pulse
+sudo ln -s /etc/sv/pipewire /var/service
+sudo ln -s /etc/sv/wireplumber /var/service
+sudo xbps-install -S noto-fonts-cjk noto-fonts-emoji
+sudo xbps-install -S fcitx5 fcitx5-mozc fcitx5-configtool
+
+sudo xbps-install -S vim neovim htop ufw gufw gvfs xdg-user-dirs-gtk
+sudo xbps-install -S foot mako wl-clipboard
+
+# Sway
+sudo xbps-install -S sway swaylock swayidle waybar wofi grim slurp xdg-utils xdg-desktop-portal-wlr
+
