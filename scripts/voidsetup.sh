@@ -22,5 +22,5 @@ sudo xbps-install -S foot mako wl-clipboard dolphin
 sudo xbps-install -S Thunar thunar-archive-plugin zip unzip p7zip
 
 # Sway
-sudo xbps-install -S sway swaylock swayidle waybar wofi grim slurp xdg-utils xdg-desktop-portal-wlr
+sudo xbps-install -S sway swaylock swayidle Waybar wofi grim slurp xdg-utils xdg-desktop-portal-wlr
 
