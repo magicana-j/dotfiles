@@ -2,7 +2,7 @@
 
 sudo xbps-install -Syu
 
-sudo xbps-install -S xf86-video-intel mesa-dri
+sudo xbps-install -S xf86-video-intel mesa-dri openh264 ffmpeg
 sudo xbps-install -S NetworkManager network-manager-applet
 sudo ln -sfv /etc/sv/NetworkManager /var/service
 sudo xbps-install -S pipewire wireplumber pipewire-pulse pavucontrol
