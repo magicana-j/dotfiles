@@ -2,6 +2,7 @@
 
 sudo xbps-install -Syu
 
+sudo zbpa-install -S xorg wayland xorg-server-xwayland
 sudo xbps-install -S dbus elogind
 sudo ln -snfv /etc/sv/dbus /var/service/
 sudo ln -snfv /etc/sv/elogind /var/service/
