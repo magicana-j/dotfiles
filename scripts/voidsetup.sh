@@ -19,7 +19,7 @@ sudo xbps-install -S bluez blueman
 
 sudo xbps-install -S vim neovim htop fastfetch ufw gufw gvfs xdg-user-dirs-gtk stow firefox
 sudo xbps-install -S foot mako wl-clipboard dolphin
-sudo xbps-install -S Thunar thunar-archive-plugin zip unzip
+sudo xbps-install -S Thunar thunar-archive-plugin zip unzip p7zip
 
 # Sway
 sudo xbps-install -S sway swaylock swayidle waybar wofi grim slurp xdg-utils xdg-desktop-portal-wlr
