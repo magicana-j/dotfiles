@@ -3,8 +3,8 @@
 sudo xbps-install -Syu
 
 sudo xbps-install -S dbus elogind
-sudo ln -snfv etc/sv/dbus /var/service/
-sudo ln -snfv etc/sv/elogind /var/service/
+sudo ln -snfv /etc/sv/dbus /var/service/
+sudo ln -snfv /etc/sv/elogind /var/service/
 sudo xbps-install -S xf86-video-intel mesa-dri openh264 ffmpeg
 sudo xbps-install -S NetworkManager network-manager-applet
 sudo ln -snfv /etc/sv/NetworkManager /var/service/
