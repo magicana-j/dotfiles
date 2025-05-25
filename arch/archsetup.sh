@@ -8,6 +8,7 @@ sudo reflector --country Japan --protocol https --age 24 --sort rate --save /etc
 sudo pacman -S --needed noto-fonts-cjk noto-fonts-extra noto-fonts-emoji
 sudo pacman -S --needed fcitx5-im fcitx5-mozc fcitx5-configtool
 sudo pacman -S --needed bluez blueman
+sudo pacman -S --needed openh264 ffmpeg firefox
 sudo pacman -S --needed flatpak
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
