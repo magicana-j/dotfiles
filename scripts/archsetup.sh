@@ -5,7 +5,7 @@ sudo pacman -S --needed reflector
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 sudo reflector --country Japan --protocol https --age 24 --sort rate --save /etc/pacman.d/mirrorlist
 
-sudo pacman -S --needed noto-fonts-cjk noto-fonts-extra noto-fonts-emoji
+sudo pacman -S --needed noto-fonts-cjk noto-fonts-extra noto-fonts-emoji adobe-source-code-pro-fonts
 sudo pacman -S --needed fcitx5-im fcitx5-mozc fcitx5-configtool
 sudo pacman -S --needed bluez blueman
 sudo pacman -S --needed openh264 ffmpeg firefox
