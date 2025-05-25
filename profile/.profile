@@ -7,3 +7,4 @@ export GLFW_IM_MODULE=fcitx
 export MOZ_ENABLE_WAYLAND=1
 export GDK_BACKEND=wayland,x11
 export QT_QPA_PLATFORM=wayland;xcb
+export LC_MESSAGES=en_us.UTF-8
