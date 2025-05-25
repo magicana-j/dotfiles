@@ -1,5 +1,5 @@
 #!/bin/sh
-
+sudo echo 'repository=https://repo-fastly.voidlinux.org/current/nonfree' > /etc/xbps.d/10-repository-nonfree.conf
 sudo xbps-install -Syu
 
 sudo zbpa-install -S xorg wayland xorg-server-xwayland
