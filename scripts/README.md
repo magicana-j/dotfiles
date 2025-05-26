@@ -1,5 +1,6 @@
 # Void Linux Setup
 
+```
 sudo echo 'repository=https://repo-fastly.voidlinux.org/current/nonfree' > /etc/xbps.d/10-repository-nonfree.conf
 
 sudo xbps-install -Syu
@@ -25,8 +26,10 @@ sudo xbps-install -S fcitx5 fcitx5-mozc fcitx5-configtool fcitx5-gtk+2 fcitx5-gt
 sudo xbps-install -S vim neovim htop fastfetch ufw gufw gvfs xdg-user-dirs-gtk stow firefox
 sudo xbps-install -S foot mako wl-clipboard dolphin
 sudo xbps-install -S Thunar thunar-archive-plugin zip unzip p7zip
+```
 
 ## Sway
 
+```
 sudo xbps-install -S sway swaylock swayidle Waybar wofi grim slurp xdg-utils xdg-desktop-portal-wlr
-
+```
