@@ -3,7 +3,7 @@ sudo xbps-install -Syu
 sudo xbps-install -Sy void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 
 sudo xbps-install -Sy vim neovim htop fastfetch ufw gufw gvfs xdg-user-dirs-gtk stow
-sudo zbpa-install -Sy wayland xorg-server-xwayland
+sudo xbps-install -Sy wayland xorg-server-xwayland
 sudo xbps-install -Sy dbus elogind polkit
 sudo xbps-install -Sy xf86-video-intel mesa-dri intel-ucode
 sudo xbps-install -Sy openh264 ffmpeg
