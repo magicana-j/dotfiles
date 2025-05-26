@@ -1,12 +1,18 @@
 #!/bin/sh
-stow alacritty
 stow bash
-stow fcitx5
-stow foot
-stow nvim
+stow zsh
 stow profile
-stow tmux
+
 stow vim
+stow nvim
+
+stow alacritty
+stow foot
+stow kitty
+stow tmux
+
 stow waybar
+
+stow fcitx5
 
 echo 'Completed.'
