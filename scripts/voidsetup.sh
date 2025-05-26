@@ -13,11 +13,11 @@ sudo xbps-install -Sy noto-fonts-cjk noto-fonts-emoji font-adobe-source-code-pro
 sudo xbps-install -Sy fcitx5 fcitx5-mozc fcitx5-configtool fcitx5-gtk+2 fcitx5-gtk+3 fcitx5-gtk4 fcitx5-qt5 fcitx5-qt6
 sudo xbps-install -Sy bluez blueman
 
-sudo ln -snfv /etc/sv/dbus /var/service/
-sudo ln -snfv /etc/sv/elogind /var/service/
-sudo ln -snfv /etc/sv/NetworkManager /var/service/
-sudo ln -snfv /etc/sv/pipewire /var/service/
-sudo ln -snfv /etc/sv/wireplumber /var/service/
+sudo ln -snv /etc/sv/dbus /var/service/
+sudo ln -snv /etc/sv/elogind /var/service/
+sudo ln -snv /etc/sv/NetworkManager /var/service/
+#sudo ln -snv /etc/sv/pipewire /var/service/
+#sudo ln -snv /etc/sv/wireplumber /var/service/
 
 sudo xbps-install -Sy firefox
 sudo xbps-install -Sy foot kitty alacritty mako wl-clipboard dolphin
