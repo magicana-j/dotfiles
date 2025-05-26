@@ -1,45 +1,72 @@
-[terminal.shell]
-program = "/bin/bash"
-args = ["-l", "-c", "tmux a -t 0 || tmux"]
+[font]
+size = 13.0
+
+[font.normal]
+family = "Noto Sans Mono CJK JP"
+style = "Regular"
+
+[font.bold]
+family = "Noto Sans Mono CJK JP"
+style = "Bold"
+
+[font.italic]
+family = "Noto Sans Mono CJK JP"
+style = "Italic"
+
+[font.offset]
+x = 0
+y = 0
+
+[font.glyph_offset]
+x = 0
+y = 0
 
 [window]
-dimensions = { columns = 90, lines = 28 }
-padding = { x = 1, y = 1 }
-opacity = 0.85
+decorations = "full"
 
-[cursor]
-style = "Beam"
+[window.dimensions]
+columns = 100
+lines = 30
+
+[window.padding]
+x = 6
+y = 4
 
 [scrolling]
 history = 10000
 multiplier = 3
 
-[font]
-size = 12.0
+[colors.primary]
+background = "0x1a1b26"
+foreground = "0xc0caf5"
 
-[font.bold]
-family = "monospace"
-style = "Bold"
+[colors.normal]
+black   = "0x15161E"
+red     = "0xf7768e"
+green   = "0x9ece6a"
+yellow  = "0xe0af68"
+blue    = "0x7aa2f7"
+magenta = "0xbb9af7"
+cyan    = "0x7dcfff"
+white   = "0xa9b1d6"
 
-[font.bold_italic]
-family = "monospace"
-style = "Bold Italic"
-
-[font.italic]
-family = "monospace"
-style = "Italic"
-
-[font.normal]
-family = "monospace"
-style = "Regular"
+[colors.bright]
+black   = "0x414868"
+red     = "0xf7768e"
+green   = "0x9ece6a"
+yellow  = "0xe0af68"
+blue    = "0x7aa2f7"
+magenta = "0xbb9af7"
+cyan    = "0x7dcfff"
+white   = "0xc0caf5"
 
 [keyboard]
 bindings = [
-   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "Q", mods = "Control|Shift", action = "Quit" }
 ]
 
-[[hints.enabled]]
-regex = "[^ ]+\\.rs:\\d+:\\d+"
-command = { program = "code", args = [ "--goto" ] }
-mouse = { enabled = true }
-
+# Wayland 環境で使用する場合（必要に応じて有効化）
+# [env]
+# WAYLAND_DISPLAY = "wayland-0"
