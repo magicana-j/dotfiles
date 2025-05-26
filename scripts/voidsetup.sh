@@ -23,7 +23,4 @@ sudo xbps-install -Sy firefox
 sudo xbps-install -Sy foot kitty alacritty mako wl-clipboard dolphin
 sudo xbps-install -Sy Thunar thunar-archive-plugin zip unzip p7zip
 
-# Sway
-sudo xbps-install -Sy sway swaylock swayidle Waybar wofi grim slurp xdg-utils xdg-desktop-portal-wlr
-
 echo 'Completed.'
