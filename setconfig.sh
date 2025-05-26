@@ -1,10 +1,10 @@
 #!/bin/sh
-stow bash
-stow zsh
+#stow bash
+#stow zsh
 stow profile
 
-stow vim
-stow nvim
+#stow vim
+#stow nvim
 
 stow alacritty
 stow foot
