@@ -19,12 +19,16 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
 sudo pacman -S --needed vim neovim htop fastfetch ufw gufw gvfs xdg-user-dirs-gtk stow
-sudo pacman -S --needed foot mako wl-clipboard alacritty dolphin thunar thunar-archive-plugin
+sudo pacman -S --needed foot kitty mako wl-clipboard alacritty dolphin thunar thunar-archive-plugin
 
+# Xfce4
 #sudo pacman -S --needed xfce4 xfce4-goodies
 
 # Sway
 sudo pacman -S --needed sway swaylock swayidle waybar wofi grim slurp xdg-utils xdg-desktop-portal-wlr
 
+# Hyprland
+#sudo pacman -S --needed waybar grim mako polkit-kde-agent qt5-wayland qt6-wayland slurp wofi xdg-desktop-portal-hyprland hyprland
+
 # niri
-sudo pacman -S --needed niri
+#sudo pacman -S --needed niri waybar swaylock swayidle waybar wofi grim slurp xdg-utils
