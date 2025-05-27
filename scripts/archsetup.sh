@@ -7,7 +7,7 @@ sudo reflector --country Japan --protocol https --age 24 --sort rate --save /etc
 
 sudo pacman -S --needed network-manager-applet
 sudo pacman -S --needed gvfs pavucontrol xarchiver zip unzip p7zip
-sudo pacman -S --needed noto-fonts-cjk noto-fonts-extra noto-fonts-emoji adobe-source-code-pro-fonts
+sudo pacman -S --needed noto-fonts-cjk noto-fonts-extra noto-fonts-emoji adobe-source-code-pro-fonts ttf-font-awesome
 sudo pacman -S --needed fcitx5-im fcitx5-mozc fcitx5-configtool
 sudo pacman -S --needed bluez blueman
 sudo pacman -S --needed openh264 ffmpeg firefox
