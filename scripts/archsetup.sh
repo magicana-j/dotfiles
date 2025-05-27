@@ -5,6 +5,8 @@ sudo pacman -S --needed reflector
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 sudo reflector --country Japan --protocol https --age 24 --sort rate --save /etc/pacman.d/mirrorlist
 
+sudo pacman -S --needed network-manager-applet
+sudo pacman -S --needed gvfs pavucontrol xarchiver zip unzip p7zip
 sudo pacman -S --needed noto-fonts-cjk noto-fonts-extra noto-fonts-emoji adobe-source-code-pro-fonts
 sudo pacman -S --needed fcitx5-im fcitx5-mozc fcitx5-configtool
 sudo pacman -S --needed bluez blueman
@@ -17,7 +19,9 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
 sudo pacman -S --needed vim neovim htop fastfetch ufw gufw gvfs xdg-user-dirs-gtk stow
-sudo pacman -S --needed foot mako wl-clipboard alacritty dolphin
+sudo pacman -S --needed foot mako wl-clipboard alacritty dolphin thunar thunar-archive-plugin
+
+#sudo pacman -S --needed xfce4 xfce4-goodies
 
 # Sway
 sudo pacman -S --needed sway swaylock swayidle waybar wofi grim slurp xdg-utils xdg-desktop-portal-wlr
