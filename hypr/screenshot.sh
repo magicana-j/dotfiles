@@ -2,7 +2,16 @@
 
 # 保存先ディレクトリ
 SAVE_DIR="$HOME/Screenshots"
-mkdir -p "$SAVE_DIR"
+
+# 保存先ディレクトリが存在しない場合は作成
+if [ ! -d "$SAVE_DIR" ]; then
+    mkdir -p "$SAVE_DIR"
+    if [ $? -ne 0 ]; then
+        dunstify "Screenshot" "Failed to create directory: $SAVE_DIR" -u critical
+        exit 1
+    fi
+fi
+
 
 # タイムスタンプでファイル名を生成
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
