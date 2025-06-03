@@ -1,4 +1,5 @@
 #!/bin/sh
+sudo xbps-install -u xbps
 sudo xbps-install -Syu
 sudo xbps-install -Sy void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 
