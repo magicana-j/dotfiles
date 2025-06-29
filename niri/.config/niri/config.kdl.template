@@ -1,0 +1,172 @@
+// niri configuration file
+//
+// このファイルは `~/.config/niri/config.kdl` に配置してください。
+// KDL (KDL Document Language) という構文で記述します。
+//
+// 公式ドキュメント: https://github.com/YaLTeR/niri/blob/main/docs/config.kdl.md
+
+// -----------------------------------------------------------------------------
+// 基本設定 (Basic Settings)
+// -----------------------------------------------------------------------------
+
+// Modキーを定義します。"super" はWindowsキー/Commandキー、"alt" はAltキーです。
+let mod = "super"
+
+// デフォルトで起動するターミナルエミュレータを設定します。
+// ご自身の環境に合わせて変更してください (例: "kitty", "foot", "wezterm")
+let terminal = "alacritty"
+
+// アプリケーションランチャーを設定します。
+// ご自身の環境に合わせて変更してください (例: "bemenu-run", "wofi --show drun")
+let app_launcher = "rofi -show drun"
+
+// -----------------------------------------------------------------------------
+// 外観 (Appearance)
+// -----------------------------------------------------------------------------
+
+preferences {
+    // true にすると、niri起動時に `autostart` セクションのプログラムが実行されます。
+    autostart-once true
+    // ウィンドウ間のギャップをピクセル単位で指定します。
+    gaps-in-pixels 8
+    // ウィンドウの外枠（ボーダー）の幅をピクセル単位で指定します。
+    border-width-pixels 2
+    // アクティブなウィンドウのボーダーカラー（ARGB形式）。
+    active-border-color "#ff88c0d0"
+    // 非アクティブなウィンドウのボーダーカラー（ARGB形式）。
+    inactive-border-color "#ff3b4252"
+}
+
+// -----------------------------------------------------------------------------
+// 自動起動 (Autostart)
+// -----------------------------------------------------------------------------
+
+// niri起動時に一度だけ実行されるプログラムを設定します。
+// `preferences` の `autostart-once` が true である必要があります。
+autostart {
+    // 日本語入力メソッド (例: fcitx5)
+    spawn "fcitx5"
+    // 壁紙設定ツール (例: swaybg)
+    spawn "swaybg -i /path/to/your/wallpaper.png"
+    // ステータスバー (例: waybar)
+    spawn "waybar"
+    // 通知デーモン (例: mako)
+    spawn "mako"
+}
+
+// -----------------------------------------------------------------------------
+// キーバインド (Keybindings)
+// -----------------------------------------------------------------------------
+
+binds {
+    // --- アプリケーション起動 ---
+    bind "${mod}+Return" { spawn "${terminal}"; }
+    bind "${mod}+d" { spawn "${app_launcher}"; }
+
+    // --- ウィンドウ操作 ---
+    // ウィンドウを閉じる (sway: $mod+Shift+q)
+    bind "${mod}+Shift+q" { close-window; }
+
+    // フォーカス移動 (sway: $mod+h/j/k/l)
+    // niriはカラムベースなので、左右はカラム間、上下はカラム内のウィンドウを移動します。
+    bind "${mod}+h" { focus-window left; }
+    bind "${mod}+l" { focus-window right; }
+    bind "${mod}+k" { focus-window up; }
+    bind "${mod}+j" { focus-window down; }
+    // 矢印キーでも同様の操作
+    bind "${mod}+Left" { focus-window left; }
+    bind "${mod}+Right" { focus-window right; }
+    bind "${mod}+Up" { focus-window up; }
+    bind "${mod}+Down" { focus-window down; }
+
+    // ウィンドウの移動 (sway: $mod+Shift+h/j/k/l)
+    bind "${mod}+Shift+h" { move-window left; }
+    bind "${mod}+Shift+l" { move-window right; }
+    bind "${mod}+Shift+k" { move-window up; }
+    bind "${mod}+Shift+j" { move-window down; }
+    // 矢印キーでも同様の操作
+    bind "${mod}+Shift+Left" { move-window left; }
+    bind "${mod}+Shift+Right" { move-window right; }
+    bind "${mod}+Shift+Up" { move-window up; }
+    bind "${mod}+Shift+Down" { move-window down; }
+    
+    // ウィンドウを隣のカラムに移動
+    bind "${mod}+Shift+greater" { move-window-to-next-column; }
+    bind "${mod}+Shift+less" { move-window-to-prev-column; }
+
+    // フルスクリーン切り替え (sway: $mod+f)
+    bind "${mod}+f" { toggle-fullscreen; }
+
+    // --- ワークスペース操作 ---
+    // ワークスペース切り替え (sway: $mod+1, 2, 3...)
+    bind "${mod}+1" { switch-to-workspace-1; }
+    bind "${mod}+2" { switch-to-workspace-2; }
+    bind "${mod}+3" { switch-to-workspace-3; }
+    bind "${mod}+4" { switch-to-workspace-4; }
+    bind "${mod}+5" { switch-to-workspace-5; }
+    bind "${mod}+6" { switch-to-workspace-6; }
+    bind "${mod}+7" { switch-to-workspace-7; }
+    bind "${mod}+8" { switch-to-workspace-8; }
+    bind "${mod}+9" { switch-to-workspace-9; }
+
+    // ウィンドウをワークスペースに移動 (sway: $mod+Shift+1, 2, 3...)
+    bind "${mod}+Shift+1" { move-window-to-workspace-1; }
+    bind "${mod}+Shift+2" { move-window-to-workspace-2; }
+    bind "${mod}+Shift+3" { move-window-to-workspace-3; }
+    bind "${mod}+Shift+4" { move-window-to-workspace-4; }
+    bind "${mod}+Shift+5" { move-window-to-workspace-5; }
+    bind "${mod}+Shift+6" { move-window-to-workspace-6; }
+    bind "${mod}+Shift+7" { move-window-to-workspace-7; }
+    bind "${mod}+Shift+8" { move-window-to-workspace-8; }
+    bind "${mod}+Shift+9" { move-window-to-workspace-9; }
+
+    // ウィンドウをワークスペースに移動して、そのワークスペースに切り替え
+    bind "${mod}+Control+1" { move-window-to-workspace-1; switch-to-workspace-1; }
+    bind "${mod}+Control+2" { move-window-to-workspace-2; switch-to-workspace-2; }
+    bind "${mod}+Control+3" { move-window-to-workspace-3; switch-to-workspace-3; }
+    bind "${mod}+Control+4" { move-window-to-workspace-4; switch-to-workspace-4; }
+    bind "${mod}+Control+5" { move-window-to-workspace-5; switch-to-workspace-5; }
+    bind "${mod}+Control+6" { move-window-to-workspace-6; switch-to-workspace-6; }
+    bind "${mod}+Control+7" { move-window-to-workspace-7; switch-to-workspace-7; }
+    bind "${mod}+Control+8" { move-window-to-workspace-8; switch-to-workspace-8; }
+    bind "${mod}+Control+9" { move-window-to-workspace-9; switch-to-workspace-9; }
+
+    // --- スクリーンショット ---
+    // 領域を選択してクリップボードにコピー (grim + slurp)
+    bind "Print" { spawn "slurp | grim -g - - | wl-copy"; }
+    // アクティブなウィンドウをクリップボードにコピー
+    bind "${mod}+Print" { spawn "grim -g \"$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | \"\\(.x), \\(.y) \\(.width)x\\(.height)\"')\" - | wl-copy"; }
+
+    // --- niriの操作 ---
+    // niriを終了
+    bind "${mod}+Shift+e" { exit; }
+    // niriをリロード
+    // bind "${mod}+Shift+c" { reload-config; } // 現在この機能は実装されていません
+}
+
+// -----------------------------------------------------------------------------
+// 出力設定 (Output Settings)
+// -----------------------------------------------------------------------------
+
+// `niri-msg -o` コマンドで出力名（例: "DP-1"）を確認できます。
+// 特定のディスプレイに対して解像度やスケールを設定する場合に使用します。
+/*
+outputs {
+    output "DP-1" {
+        // 解像度とリフレッシュレート
+        // mode "3840x2160@60Hz"
+        // スケールファクター
+        // scale 2.0
+        // 位置
+        // position 0 0
+    }
+    output "HDMI-A-1" {
+        // mode "1920x1080@60Hz"
+        // scale 1.0
+        // position 1920 0
+    }
+    output "eDP-1" {
+        scale 1.0
+    }
+}
+*/
