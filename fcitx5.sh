@@ -1,0 +1,5 @@
+cat << EOF >> ~/.xprofile
+export XMODIFIER=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+EOF

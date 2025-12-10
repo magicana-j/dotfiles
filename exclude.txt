@@ -1,5 +1,0 @@
-.git/
-Makefile
-exclude-list.txt
-README.md
-scripts/
