@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 cat << EOF >> ~/.xprofile
 export XMODIFIER=@im=fcitx
 export GTK_IM_MODULE=fcitx
